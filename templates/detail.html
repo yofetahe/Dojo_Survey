@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container divSize">
+        <p>Submitted Info</p>
+        <p>Name: {{ name }} </p>
+        <p>Gender: {{ gender }} </p>
+        <p>Dojo Location: {{ location }} </p>
+        <p>Favorite Language: {{ language }} </p>
+        <p>Comment: {{ comment }} </p>
+        <a href="/index" class="btn btn-primary">Go Back</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container divSize">
+        <form action="/index" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.name.label }}
+                    {% if form.name.errors %}
+                        {% for error in form.name.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {{ form.name(class='form-control') }}
+            </div>
+            <div class="form-check form-check-inline">
+                {{ form.gender.label(class='form-check-label') }}
+                    {% if form.gender.errors %}
+                        {% for error in form.gender.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {{ form.gender(class='form-check-input') }}
+            </div>
+            <div class="form-group">
+                {{ form.location.label }}
+                    {% if form.location.errors %}
+                        {% for error in form.location.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {{ form.location(class='form-control') }}
+            </div>
+            <div class="form-group">
+                {{ form.language.label }}
+                    {% if form.language.errors %}
+                        {% for error in form.language.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {{ form.language(class='form-control') }}
+            </div>
+            <div class="form-group">
+                {{ form.comment.label }}
+                    {% if form.comment.errors %}
+                        {% for error in form.language.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {{ form.comment(class='form-control') }}
+            </div>
+            {{ form.submit(class='btn btn-primary') }}
+        </form>
+    </div>
+{% endblock %}
