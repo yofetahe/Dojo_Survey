@@ -2,11 +2,11 @@
 {% block content %}
     <div class="container divSize">
         <p>Submitted Info</p>
-        <p>Name: {{ name }} </p>
-        <p>Gender: {{ gender }} </p>
-        <p>Dojo Location: {{ location }} </p>
-        <p>Favorite Language: {{ language }} </p>
-        <p>Comment: {{ comment }} </p>
+        <p>Name: {{ surveyInfo[0]['name'] }} </p>
+        <p>Gender: {{ surveyInfo[0]['gender'] }} </p>
+        <p>Dojo Location: {{ surveyInfo[0]['location'] }} </p>
+        <p>Favorite Language: {{ surveyInfo[0]['language'] }} </p>
+        <p>Comment: {{ surveyInfo[0]['comment'] }} </p>
         <a href="/index" class="btn btn-primary">Go Back</a>
     </div>
 {% endblock %}
